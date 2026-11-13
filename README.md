@@ -20,6 +20,6 @@ Ultimately, a file named after Cut6_kappa-m666.hdf5 is obtained, which can be us
 
 Use kappa_final.ipynb and Scattering.ipynb in Python to visualize the kappa and scattering rate. 
 
-Use 
+Use scripts for gnu-plots_Kumu to visulize the accumulated kappa. 
 
 
