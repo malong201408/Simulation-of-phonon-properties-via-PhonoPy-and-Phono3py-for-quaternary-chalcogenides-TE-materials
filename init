@@ -1,0 +1,9 @@
+AgZn2InTe4_KS
+/apps/vasp/5.3.5/potpaw_PBE.52
+Ag   Zn   In   Te
+/home/l/longm2/anaconda3/envs/phonopy/bin
+"3 3 3"
+"2 2 2"
+"0.000 0.000 0.000 0.000 0.000 0.500 0.250 0.250 0.250 0.000 0.500 0.000 0.000 0.000 0.000 -0.500 0.500 0.500"
+MAGMOM = 648*0
+6
