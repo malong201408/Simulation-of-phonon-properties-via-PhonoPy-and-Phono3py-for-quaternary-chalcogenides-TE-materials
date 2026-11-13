@@ -1,0 +1,26 @@
+SYSTEM
+ISTART =  0
+ICHARG =  2
+ISMEAR = 0        #CHANGED, Gaussian for Semiconductor or insulator
+SIGMA  =  0.01
+EDIFF  =  1.0E-5
+EDIFFG =  -1.0E-8  #CHANGED
+IBRION =  -1      #CHANGED, purturbative method to update phonopy
+ISIF = 2          #CHANGED
+
+LREAL  = .FALSE.
+ADDGRID = .TRUE.
+ISYM = 2
+
+NELM   =  100
+NELMIN =  2
+NPAR   =  8
+NSW    =  0       #CHANGED
+PREC   =  Accurate
+ISPIN  =  1
+# LORBIT = 11       #ADDED
+LWAVE  =  .FALSE.
+LCHARG =  .FALSE.  #CHANGED
+# LELF = .TRUE.     #ADDED
+IALGO  =  38
+ENCUT

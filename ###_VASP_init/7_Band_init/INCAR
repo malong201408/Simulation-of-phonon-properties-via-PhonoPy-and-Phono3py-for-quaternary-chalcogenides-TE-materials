@@ -1,0 +1,28 @@
+SYSTEM
+ISTART =  0
+ICHARG =  11      ### Changed
+ISMEAR =  1       ### Changed
+SIGMA  =  0.2
+EDIFF  =  1.0E-6
+EDIFFG =  1.0E-5  #CHANGED
+IBRION =  -1      #CHANGED
+ISIF = 2          #CHANGED
+
+LREAL  = .FALSE.
+ADDGRID = .TRUE.
+ISYM = 2
+
+NELM   =  100
+NELMIN =  2
+NPAR   =  6
+NSW    =  0       #CHANGED
+PREC   =  Accurate
+ISPIN  =  1
+### LORBIT = 11       #ADDED
+### LWAVE  =  .FALSE.
+### LCHARG =  .TRUE.  #CHANGED
+### LELF = .TRUE.     #ADDED
+IALGO  =  38
+ENCUT
+
+

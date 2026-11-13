@@ -1,0 +1,5 @@
+# Definition of the k-point mesh   2
+  0
+Gamma Monkhorst Pack
+     8     8     8  # Number of gridpoints in each dimension
+     0     0     0  # Shifts

@@ -1,0 +1,3 @@
+The files needed to be changed
+In "7_Band_init" folder, the KPOINTS files
+In "Phonon_Band_init" folder, the band.conf, need to be changed to k-path
