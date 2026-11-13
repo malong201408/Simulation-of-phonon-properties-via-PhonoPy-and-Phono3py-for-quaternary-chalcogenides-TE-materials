@@ -1,0 +1,37 @@
+/home/l/longm2/anaconda3/envs/phonopy/bin/phono3py --fc3 --fc2 --sym-fc2 --sym-fc3r --dim_fc2="3 3 3" --dim="2 2 2" --mesh="6 6 6" --sigma 0.1 --br --read-gamma --gp="0 1 2" --num-freq-points=500
+#/home/l/longm2/anaconda3/envs/phonopy/bin/phono3py --dim-fc2="3 3 3" --dim="2 2 2" --pa="P" -c POSCAR --mesh="6 6 6" --sym-fc2 --sym-fc3r --br --num-freq-points=500
+/home/l/longm2/anaconda3/envs/phonopy/bin/phono3py-kaccum --pa="P" -c POSCAR kappa-m666.hdf5 |tee kaccum.dat
+set encoding utf8
+set xlabel "{/Times:Bold Frequency (THz)}" font "Times-Roman, 36" offset 0,-3
+set ylabel "{/Times:Bold {/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}} (Wm^{/*0.75 ^{-1}}K^{/*0.75 ^{-1}})}" font "Times-Roman, 36" offset -14,0 
+set xtics font ":Bold, 36" offset -1,-1 scale 2.5
+set yrange [0:2]
+set ytics 0,0.4,2 font ":Bold, 36" offset -2,0 scale 2.5
+set border lw 20
+set key font ":Bold, 32" 
+set key at screen 0.85, screen 0.7
+unset key
+set lmargin at screen 0.20
+set rmargin at screen 0.85
+set bmargin at screen 0.20
+set tmargin at screen 0.85
+p "kaccumKS.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{KS}}" lw 8 linecolor rgb "blue" dashtype 2, "kaccumKS.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{KS}}/d{/symbol w}" lw 8 linecolor rgb "blue", "kaccumPMCA.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{PMCA}}" lw 8 linecolor rgb "goldenrod" dashtype 2, "kaccumPMCA.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{PMCA}}/d{/symbol w}" lw 8 linecolor rgb "goldenrod", "kaccumST.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{ST}}" lw 8 linecolor rgb "green" dashtype 2, "kaccumST.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{ST}}/d{/symbol w}" lw 8 linecolor rgb "green", "kaccumWKS.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{WKS}}" lw 8 linecolor rgb "cyan" dashtype 2, "kaccumWKS.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{WKS}}/d{/symbol w}" lw 8 linecolor rgb "cyan", "kaccumWST.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{WST}}" lw 8 linecolor rgb "orange-red" dashtype 2, "kaccumWST.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{xx}}_{/*0.75 \\_}_{/*0.75 _{WST}}/d{/symbol w}" lw 8 linecolor rgb "orange-red"
+#p "kaccumKS.dat" i 30 u 1:4 w l smooth mcsplines title "{/symbol k}_{zz}_{\\_}_{KS}" lw 8 linecolor rgb "blue" dashtype 2, "kaccumKS.dat" i 30 u 1:10 w l smooth mcsplines title "d{/symbol k}_{zz}_{\\_}_{KS}/d{/symbol w}" lw 8 linecolor rgb "blue", "kaccumPMCA.dat" i 30 u 1:4 w l smooth mcsplines title "{/symbol k}_{zz}_{\\_}_{PMCA}" lw 8 linecolor rgb "goldenrod" dashtype 2, "kaccumPMCA.dat" i 30 u 1:10 w l smooth mcsplines title "d{/symbol k}_{zz}_{\\_}_{PMCA}/d{/symbol w}" lw 8 linecolor rgb "goldenrod", "kaccumST.dat" i 30 u 1:4 w l smooth mcsplines title "{/symbol k}_{zz}_{\\_}_{ST}" lw 8 linecolor rgb "green" dashtype 2, "kaccumST.dat" i 30 u 1:10 w l smooth mcsplines title "d{/symbol k}_{zz}_{\\_}_{ST}/d{/symbol w}" lw 8 linecolor rgb "green", "kaccumWKS.dat" i 30 u 1:4 w l smooth mcsplines title "{/symbol k}_{zz}_{\\_}_{WKS}" lw 8 linecolor rgb "cyan" dashtype 2, "kaccumWKS.dat" i 30 u 1:10 w l smooth mcsplines title "d{/symbol k}_{zz}_{\\_}_{WKS}/d{/symbol w}" lw 8 linecolor rgb "cyan", "kaccumWST.dat" i 30 u 1:4 w l smooth mcsplines title "{/symbol k}_{zz}_{\\_}_{WST}" lw 8 linecolor rgb "orange-red" dashtype 2, "kaccumWST.dat" i 30 u 1:10 w l smooth mcsplines title "d{/symbol k}_{zz}_{\\_}_{WST}/d{/symbol w}" lw 8 linecolor rgb "orange-red"
+
+set encoding utf8
+set xlabel "{/Times:Bold Frequency (THz)}" font "Times-Roman, 36" offset 0,-3
+set ylabel "{/Times:Bold {/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}} (Wm^{/*0.75 ^{-1}}K^{/*0.75 ^{-1}})}" font "Times-Roman, 36" offset -14,0 
+set xtics font ":Bold, 36" offset -1,-1 scale 2.5
+set yrange [0:2]
+set ytics 0,0.4,2 font ":Bold, 36" offset -2,0 scale 2.5
+set border lw 20
+set key font ":Bold, 32" 
+set key at screen 0.85, screen 0.7
+unset key
+set lmargin at screen 0.20
+set rmargin at screen 0.85
+set bmargin at screen 0.20
+set tmargin at screen 0.85
+p "kaccumKS.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{KS}}" lw 8 linecolor rgb "blue" dashtype 2, "kaccumKS.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{KS}}/d{/symbol w}" lw 8 linecolor rgb "blue", "kaccumPMCA.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{PMCA}}" lw 8 linecolor rgb "goldenrod" dashtype 2, "kaccumPMCA.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{PMCA}}/d{/symbol w}" lw 8 linecolor rgb "goldenrod", "kaccumST.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{ST}}" lw 8 linecolor rgb "green" dashtype 2, "kaccumST.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{ST}}/d{/symbol w}" lw 8 linecolor rgb "green", "kaccumWKS.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{WKS}}" lw 8 linecolor rgb "cyan" dashtype 2, "kaccumWKS.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{WKS}}/d{/symbol w}" lw 8 linecolor rgb "cyan", "kaccumWST.dat" i 30 u 1:2 w l smooth mcsplines title "{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{WST}}" lw 8 linecolor rgb "orange-red" dashtype 2, "kaccumWST.dat" i 30 u 1:8 w l smooth mcsplines title "d{/symbol k}@^{/*0.75 ^{c}}_{/*0.75 _{zz}}_{/*0.75 \\_}_{/*0.75 _{WST}}/d{/symbol w}" lw 8 linecolor rgb "orange-red"
+
+
