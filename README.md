@@ -18,4 +18,8 @@ Run Sub_Phono3py1 to generate the folders for kappa calculation. Run Sub_Phono3p
 
 Ultimately, a file named after Cut6_kappa-m666.hdf5 is obtained, which can be used to plot the kappa and the scattering rate
 
+Use kappa_final.ipynb and Scattering.ipynb in Python to visualize the kappa and scattering rate. 
+
+Use 
+
 
